@@ -1,0 +1,22 @@
+services:
+    sonata.tabssoft.admin.categoery:
+        class: Test\TaskBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Category" }
+        arguments:
+            - ~
+            - Test\TaskBundle\Entity\Category
+            - ~
+        calls:
+            - [ setTranslationDomain, [TestTaskBundle]]
+
+    sonata.tabssoft.admin.product:
+            class: Test\TaskBundle\Admin\ProductAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: "Content", label: "Product" }
+            arguments:
+                - ~
+                - Test\TaskBundle\Entity\Product
+                - ~
+            calls:
+                - [ setTranslationDomain, [TestTaskBundle]]
