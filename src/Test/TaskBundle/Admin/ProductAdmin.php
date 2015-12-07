@@ -36,7 +36,7 @@ class ProductAdmin extends Admin
     {
         $datagridMapper
             ->add('category')
-            ->add('name')
+            ->add('name', 'sonata_type_model_autocomplete')
             ->add('date', 'doctrine_orm_datetime_range', array(), null, array('widget' => 'single_text', 'required' => false,  'attr' => array('class' => 'datepicker')))
 //            ->add('date', 'doctrine_orm_datetime_range', array('field_type'=>'sonata_type_datetime_range_picker',))
         ;
